@@ -226,27 +226,28 @@ function FeaturedProjects() {
             )}
 
             {/* Videos Section */}
-            {selectedProject.media.videos &&
-              selectedProject.media.videos.length > 0 && (
-                <div style={{ marginBottom: '20px' }}>
-                  <h4>Videos</h4>
-                  {selectedProject.media.videos.map((video, index) => (
-                    <video
-                      key={index}
-                      width="320"
-                      height="240"
-                      controls
-                      style={{
-                        marginRight: '10px',
-                        marginBottom: '10px'
-                      }}
-                    >
-                      <source src={video} type="video/mp4" />
-                      Your browser does not support the video tag.
-                    </video>
-                  ))}
-                </div>
-              )}
+            {selectedProject.media.videos.map((video, index) => {
+            // Extract video ID from the youtu.be URL
+            const videoId = video.split('/').pop().split('?')[0];
+            const embedUrl = `https://www.youtube.com/embed/${videoId}`;
+            return (
+                <iframe
+                key={index}
+                width="320"
+                height="240"
+                src={embedUrl}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                style={{
+                    marginRight: '10px',
+                    marginBottom: '10px'
+                }}
+                title={`video-${index}`}
+                ></iframe>
+            );
+            })}
+
 
             {/* Optional Photos Section */}
             {selectedProject.media.photos &&
