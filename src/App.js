@@ -33,10 +33,22 @@ function App() {
   return (
     <div style={appStyle}>
       <Header />
-      
+
+      {/* Responsive adjustments for the hero section */}
+      <style>{`
+        @media (max-width: 768px) {
+          .hero h1 {
+            font-size: 32px;
+            line-height: 36px;
+            letter-spacing: -0.3px;
+            margin: 0 20px;
+          }
+        }
+      `}</style>
+
       <main>
         {/* Hero / Intro Section */}
-        <section style={heroStyle}>
+        <section style={heroStyle} className="hero">
           <h1>Allison Turner</h1>
         </section>
 

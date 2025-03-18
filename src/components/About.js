@@ -29,7 +29,7 @@ function About() {
         .section-title {
           margin-bottom: 20px;
           font-size: 2rem;
-          fontFamily: 'Roboto, sans-serif',
+          font-family: 'Roboto', sans-serif;
         }
         
         .about-description p {
@@ -60,6 +60,26 @@ function About() {
           margin-right: 8px;
           font-size: 1.5rem;
         }
+        
+        /* Mobile responsive styles */
+        @media (max-width: 768px) {
+          .about-container {
+            flex-direction: column;
+            text-align: center;
+          }
+          .about-description {
+            margin-left: 0;
+            margin-top: 20px;
+            max-width: 100%;
+          }
+          .about-image img {
+            width: 150px;
+            height: 150px;
+          }
+          .about-links {
+            justify-content: center;
+          }
+        }
       `}</style>
       <div className="about-container">
         <div className="about-image">
@@ -67,7 +87,7 @@ function About() {
         </div>
         <div className="about-description">
           <p>
-          I’m Allison Turner, a software developer at Florida Blue. I hold dual degrees, a Bachelor of Science in Computer Science and a Bachelor of Arts in Music, from the University of Central Florida. I'm am aslo currently pursuing a Master’s in Computer Science at UCF. My professional experience includes designing and deploying applications using technologies like React, Node.js, Express, and Go, along with maintaining backend services with Jenkins and OpenShift. I've contributed to enhancing user experiences through responsive interfaces, resolving production incidents, and creating tools to improve software reliability.
+            I’m Allison Turner, a software developer at Florida Blue. I hold dual degrees, a Bachelor of Science in Computer Science and a Bachelor of Arts in Music, from the University of Central Florida. I'm also currently pursuing a Master’s in Computer Science at UCF. My professional experience includes designing and deploying applications using technologies like React, Node.js, Express, and Go, along with maintaining backend services with Jenkins and OpenShift. I've contributed to enhancing user experiences through responsive interfaces, resolving production incidents, and creating tools to improve software reliability.
           </p>
           <div className="about-links">
             <a href="https://www.linkedin.com/in/allisonturner02" target="_blank" rel="noopener noreferrer">
