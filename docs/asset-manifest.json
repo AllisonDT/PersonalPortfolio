@@ -1,11 +1,14 @@
 {
   "files": {
-    "main.js": "/PersonalPortfolio/static/js/main.923f8e4a.js",
+    "main.js": "/PersonalPortfolio/static/js/main.93a77c9e.js",
+    "static/media/flavorFusionPaper.pdf": "/PersonalPortfolio/static/media/flavorFusionPaper.427d57fa5aeceefbf08d.pdf",
+    "static/media/CapstoneDocument.pdf": "/PersonalPortfolio/static/media/CapstoneDocument.d43b273f87ffb8678e29.pdf",
+    "static/media/CapstonePresentation.pdf": "/PersonalPortfolio/static/media/CapstonePresentation.71beb8b72e8179e45356.pdf",
     "static/media/profile.jpeg": "/PersonalPortfolio/static/media/profile.cd6b9580ed088488d519.jpeg",
     "index.html": "/PersonalPortfolio/index.html",
-    "main.923f8e4a.js.map": "/PersonalPortfolio/static/js/main.923f8e4a.js.map"
+    "main.93a77c9e.js.map": "/PersonalPortfolio/static/js/main.93a77c9e.js.map"
   },
   "entrypoints": [
-    "static/js/main.923f8e4a.js"
+    "static/js/main.93a77c9e.js"
   ]
 }
