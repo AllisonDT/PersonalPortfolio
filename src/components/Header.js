@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const headerStyles = {
   top: '0px',
@@ -34,22 +34,33 @@ const navTabStyles = {
 };
 
 function Header() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // Function to check the window width
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    // Check on mount
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+    // Cleanup the event listener on unmount
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  // If mobile, don't render the header
+  if (isMobile) return null;
+
   return (
     <header style={headerStyles}>
       <h2 style={titleStyles}>My Portfolio</h2>
       <nav style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center' }}>
-        <a href="#about" style={navTabStyles}>
-          About
-        </a>
-        <a href="#work-experience" style={navTabStyles}>
-          Work Experience
-        </a>
-        <a href="#education" style={navTabStyles}>
-          Education
-        </a>
-        <a href="#featured-projects" style={navTabStyles}>
-          Featured Projects
-        </a>
+        <a href="#about" style={navTabStyles}>About</a>
+        <a href="#work-experience" style={navTabStyles}>Work Experience</a>
+        <a href="#education" style={navTabStyles}>Education</a>
+        <a href="#featured-projects" style={navTabStyles}>Featured Projects</a>
       </nav>
     </header>
   );
