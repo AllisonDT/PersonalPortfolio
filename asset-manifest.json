@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.js": "/AllisonDT/PersonalPortfolio/static/js/main.e8b3e918.js",
-    "static/media/profile.jpeg": "/AllisonDT/PersonalPortfolio/static/media/profile.cd6b9580ed088488d519.jpeg",
-    "index.html": "/AllisonDT/PersonalPortfolio/index.html",
-    "main.e8b3e918.js.map": "/AllisonDT/PersonalPortfolio/static/js/main.e8b3e918.js.map"
+    "main.js": "/PersonalPortfolio/static/js/main.df6a7787.js",
+    "static/media/profile.jpeg": "/PersonalPortfolio/static/media/profile.cd6b9580ed088488d519.jpeg",
+    "index.html": "/PersonalPortfolio/index.html",
+    "main.df6a7787.js.map": "/PersonalPortfolio/static/js/main.df6a7787.js.map"
   },
   "entrypoints": [
-    "static/js/main.e8b3e918.js"
+    "static/js/main.df6a7787.js"
   ]
 }
