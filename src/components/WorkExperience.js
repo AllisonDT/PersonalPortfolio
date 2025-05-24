@@ -58,7 +58,7 @@ function WorkExperience() {
       
       <div style={experienceItemStyle}>
         <h3 style={experienceTitleStyle}>Florida Blue/GuideWell: Associate IT Developer</h3>
-        <p style={experienceDateStyle}>June 2024 – Present</p>
+        <p style={experienceDateStyle}>June 2024 – May 2025</p>
         <ul style={experienceListStyle}>
           <li style={experienceListItemStyle}>
             Utilized React to create responsive user interfaces and used Node.js/Express/Go to build backend services.
