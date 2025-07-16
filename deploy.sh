@@ -8,7 +8,7 @@ echo "Removing the old docs folder..."
 rm -rf docs
 
 echo "Copying build folder to docs..."
-cp -r build docs
+cp -r dist docs
 
 echo "Adding docs folder to git..."
 git add docs
