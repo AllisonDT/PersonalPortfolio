@@ -57,6 +57,19 @@ function WorkExperience() {
       <h2 style={sectionTitleStyle}>Experience</h2>
       
       <div style={experienceItemStyle}>
+        <h3 style={experienceTitleStyle}>Bloom Energy: Graduate Software Engineering Intern</h3>
+        <p style={experienceDateStyle}>June 2025 – August 2025</p>
+        <ul style={experienceListStyle}>
+          <li style={experienceListItemStyle}>
+            Designed and developed a custom dashboard web application to display real-time GitHub repository statuses, including passing pipelines, open merge requests, and keyword-based tracking. Deployed to S3 on AWS.
+          </li>
+          <li style={experienceListItemStyle}>
+            Built an internal server status monitoring web application to provide live visibility into the health of both internal and external services, helping teams quickly identify and respond to outages.
+          </li>
+        </ul>
+      </div>
+
+      <div style={experienceItemStyle}>
         <h3 style={experienceTitleStyle}>Florida Blue/GuideWell: Associate IT Developer</h3>
         <p style={experienceDateStyle}>June 2024 – May 2025</p>
         <ul style={experienceListStyle}>
