@@ -1,68 +1,35 @@
 import React from 'react';
+import { Navigate, Route, Routes } from 'react-router-dom';
+import './App.css';
 
 // Components
 import Header from './components/Header';
-import WorkExperience from './components/WorkExperience';
-import FeaturedProjects from './components/FeaturedProjects';
-import Education from './components/Education';
-import About from './components/About';
 import Footer from './components/Footer';
-
-// Removed App.css since styling is now defined in constants
-
-const appStyle = {
-  minHeight: '100vh',
-  backgroundColor: '#f2f2f2',  // Sets the background color
-  color: '#333',              // Sets the text color
-  margin: 0,
-  fontFamily: 'Arial, Helvetica, sans-serif'
-};
-
-const heroStyle = {
-  textAlign: 'center',
-  color: '#030303',
-  fontSize: '40px',
-  fontFamily: 'Roboto, sans-serif',
-  fontWeight: 300,
-  letterSpacing: '-0.6px',
-  lineHeight: '32px',
-  marginBottom: '30px'
-};
+import AboutPage from './pages/AboutPage';
+import ExperiencePage from './pages/ExperiencePage';
+import EducationPage from './pages/EducationPage';
+import ProjectsPage from './pages/ProjectsPage';
+import ProjectDetailPage from './pages/ProjectDetailPage';
+import NotFoundPage from './pages/NotFoundPage';
 
 function App() {
   return (
-    <div style={appStyle}>
+    <div className="app-shell">
+      <div className="background-orb background-orb--one" aria-hidden="true" />
+      <div className="background-orb background-orb--two" aria-hidden="true" />
+
       <Header />
 
-      {/* Responsive adjustments for the hero section */}
-      <style>{`
-        @media (max-width: 768px) {
-          .hero h1 {
-            font-size: 32px;
-            line-height: 36px;
-            letter-spacing: -0.3px;
-            margin: 0 20px;
-          }
-        }
-      `}</style>
-
-      <main>
-        {/* Hero / Intro Section */}
-        <section style={heroStyle} className="hero">
-          <h1>Allison Turner</h1>
-        </section>
-
-        {/* About Me */}
-        <About />
-
-        {/* Work Experience */}
-        <WorkExperience />
-
-        {/* Education */}
-        <Education />
-
-        {/* Featured Projects */}
-        <FeaturedProjects />
+      <main className="main-content">
+        <Routes>
+          <Route path="/" element={<AboutPage />} />
+          <Route path="/about" element={<Navigate to="/" replace />} />
+          <Route path="/experience" element={<ExperiencePage />} />
+          <Route path="/education" element={<EducationPage />} />
+          <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/projects/:slug" element={<ProjectDetailPage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
       </main>
 
       <Footer />
